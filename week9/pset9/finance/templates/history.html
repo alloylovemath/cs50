@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    C$50 Finance:History
+{% endblock %}
+
+{% block main %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-start">Symbol</th>
+            <th class="text-end">Shares</th>
+            <th class="text-end">Price</th>
+            <th class="text-end">Transacted</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in inform %}
+            <tr>
+                <td class="text-start">{{ item[0] }}</td>
+                <td class="text-end">{{ item[1] }}</td>
+                <td class="text-end">{{ item[2] }}</td>
+                <td class="text-end">{{ item[3] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
